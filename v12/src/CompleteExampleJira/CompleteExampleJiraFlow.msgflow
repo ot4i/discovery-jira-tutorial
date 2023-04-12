@@ -25,7 +25,10 @@
       <nodes xmi:type="ComIbmWSReply.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_8" location="432,27">
         <translation xmi:type="utility:ConstantString" string="HTTP Reply"/>
       </nodes>
-      <nodes xmi:type="ComIbmApplicationConnectorRequest_jira.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="448,91" applicationConnectorType="jira">
+      <nodes xmi:type="ComIbmApplicationConnectorRequest_jira.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="448,91" applicationConnectorType="jira" action="RETRIEVEALL" businessObject="Issue" displayName="Retrieve issues" schemaPrefix="gen/CompleteExampleJiraFlow.Jira_Request" policyUrl="{CompletePolicyProjectJira}:Jira1" messageSetProperty="gen/CompleteExampleJiraFlow.Jira_Request.response.schema.json">
+        <filter>
+          <queryProperties limit="1" allowTruncation="true" paginationType="SKIP_LIMIT"/>
+        </filter>
         <translation xmi:type="utility:ConstantString" string="Jira Request"/>
       </nodes>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_2" targetNode="FCMComposite_1_4" sourceNode="FCMComposite_1_6" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>

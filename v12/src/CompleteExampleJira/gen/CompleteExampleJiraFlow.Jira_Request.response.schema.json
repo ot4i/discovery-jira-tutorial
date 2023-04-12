@@ -1,0 +1,1513 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "displayOrder": 1,
+        "title": "Issue ID",
+        "description": "The unique identifier or unique key for the issue",
+        "type": "string"
+      },
+      "fields": {
+        "displayOrder": 4,
+        "title": "Issue fields",
+        "type": "object",
+        "properties": {
+          "issuetype": {
+            "displayOrder": 1,
+            "title": "IssueType",
+            "description": "The Type for the issue",
+            "type": "object",
+            "properties": {
+              "self": {
+                "displayOrder": 1,
+                "title": "self",
+                "description": "The URL for the issuetype",
+                "type": "string"
+              },
+              "id": {
+                "displayOrder": 2,
+                "title": "ID",
+                "description": "The unique identifier for the issueTYPE",
+                "type": "string"
+              },
+              "description": {
+                "displayOrder": 3,
+                "title": "Description",
+                "description": "The description for the issueTYPE",
+                "type": "string"
+              },
+              "iconUrl": {
+                "displayOrder": 4,
+                "title": "Iconurl",
+                "description": "The  Url for the icon",
+                "type": "string"
+              },
+              "name": {
+                "displayOrder": 5,
+                "title": "name",
+                "description": "The name for the issuetype",
+                "type": "string"
+              },
+              "subtask": {
+                "displayOrder": 6,
+                "title": "subtask",
+                "description": "The subtask for the issuetype",
+                "type": "boolean"
+              },
+              "avatarId": {
+                "displayOrder": 7,
+                "title": "avatarID",
+                "description": "The unique avatarId for the issueTYPE",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          "timespent": {
+            "displayOrder": 2,
+            "title": "timespent",
+            "description": "total timespent",
+            "type": "number"
+          },
+          "timeoriginalestimate": {
+            "displayOrder": 3,
+            "title": "Oiginal estimate for the issue",
+            "type": "number"
+          },
+          "description": {
+            "displayOrder": 4,
+            "title": "Issue description",
+            "type": "string"
+          },
+          "project": {
+            "displayOrder": 5,
+            "title": "Project",
+            "description": "The project on which issue is created",
+            "type": "object",
+            "properties": {
+              "self": {
+                "displayOrder": 1,
+                "title": "self",
+                "description": "The URL for the project",
+                "type": "string"
+              },
+              "id": {
+                "displayOrder": 2,
+                "title": "ID",
+                "description": "The unique identifier for the project",
+                "type": "string"
+              },
+              "key": {
+                "displayOrder": 3,
+                "title": "Key",
+                "description": "The key for the project",
+                "type": "string"
+              },
+              "name": {
+                "displayOrder": 4,
+                "title": "name",
+                "description": "The  name for the project",
+                "type": "string"
+              },
+              "avatarUrls": {
+                "displayOrder": 5,
+                "title": "avatarUrls",
+                "description": "The url for the avatar",
+                "type": "object",
+                "properties": {
+                  "48x48": {
+                    "displayOrder": 1,
+                    "title": "48x48",
+                    "description": "The url for the avatar icon",
+                    "type": "string"
+                  },
+                  "24x24": {
+                    "displayOrder": 2,
+                    "title": "24x24",
+                    "description": "The url for the avatar icon",
+                    "type": "string"
+                  },
+                  "16x16": {
+                    "displayOrder": 3,
+                    "title": "16x16",
+                    "description": "The url for the avatar icon",
+                    "type": "string"
+                  },
+                  "32x32": {
+                    "displayOrder": 4,
+                    "title": "32x32",
+                    "description": "The url for the avatar icon",
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "parent": {
+            "displayOrder": 5,
+            "title": "Parent issue",
+            "description": "The parent issue for the sub task",
+            "type": "object",
+            "properties": {
+              "id": {
+                "displayOrder": 2,
+                "title": "Parent issue ID",
+                "description": "The unique identifier for the parent issue ID",
+                "type": "string"
+              },
+              "key": {
+                "displayOrder": 3,
+                "title": "Parent Issue Key",
+                "description": "The unique key for the parent issue",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          "fixVersions": {
+            "displayOrder": 6,
+            "title": "fixversions",
+            "description": "The fixversions for the issue",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "self": {
+                  "displayOrder": 1,
+                  "title": "self",
+                  "description": "The URL for the version",
+                  "type": "string"
+                },
+                "id": {
+                  "displayOrder": 2,
+                  "title": "id",
+                  "description": "The unique identifier for the version",
+                  "type": "string"
+                },
+                "description": {
+                  "displayOrder": 3,
+                  "title": "description",
+                  "description": "The description for the version",
+                  "type": "string"
+                },
+                "name": {
+                  "displayOrder": 4,
+                  "title": "name",
+                  "description": "The name for the version",
+                  "type": "string"
+                },
+                "archived": {
+                  "displayOrder": 5,
+                  "title": "archived",
+                  "description": "The archive description",
+                  "type": "boolean"
+                },
+                "released": {
+                  "displayOrder": 6,
+                  "title": "released",
+                  "description": "The released description",
+                  "type": "boolean"
+                }
+              },
+              "additionalProperties": false
+            },
+            "additionalItems": false
+          },
+          "aggregatetimespent": {
+            "displayOrder": 7,
+            "title": "aggregatetimespent",
+            "description": "The total time spent on issue in seconds",
+            "type": "number"
+          },
+          "resolution": {
+            "displayOrder": 8,
+            "title": "resolution",
+            "description": "The resolution for the issue",
+            "type": "object",
+            "properties": {
+              "self": {
+                "displayOrder": 1,
+                "title": "self",
+                "description": "The URL for the RESOLUTION",
+                "type": "string"
+              },
+              "id": {
+                "displayOrder": 2,
+                "title": "id",
+                "description": "The unique identifier for the resolution",
+                "type": "string"
+              },
+              "description": {
+                "displayOrder": 3,
+                "title": "description",
+                "description": "The description for the resolution",
+                "type": "string"
+              },
+              "name": {
+                "displayOrder": 4,
+                "title": "name",
+                "description": "The name for the resolution",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          "timetracking": {
+            "displayOrder": 9,
+            "title": "timetracking",
+            "description": "The timetracking for issue",
+            "type": "object",
+            "properties": {
+              "originalEstimate": {
+                "displayOrder": 1,
+                "title": "originalEstimate",
+                "description": "The originalEstimate for the issue",
+                "type": "string"
+              },
+              "remainingEstimate": {
+                "displayOrder": 2,
+                "title": "remainingEstimate",
+                "description": "The remainingEstimate for the issues to be completed",
+                "type": "string"
+              },
+              "timeSpent": {
+                "displayOrder": 3,
+                "title": "timeSpent",
+                "description": "The timeSpent for the issue",
+                "type": "string"
+              },
+              "originalEstimateSeconds": {
+                "displayOrder": 4,
+                "title": "originalEstimateSeconds",
+                "description": "The originalEstimateSeconds description",
+                "type": "number"
+              },
+              "remainingEstimateSeconds": {
+                "displayOrder": 5,
+                "title": "remainingEstimateSeconds",
+                "description": "The remainingEstimateSeconds description",
+                "type": "number"
+              },
+              "timeSpentSeconds": {
+                "displayOrder": 6,
+                "title": "timeSpentSeconds",
+                "description": "The remainingEstimateSeconds description",
+                "type": "number"
+              }
+            },
+            "additionalProperties": false
+          },
+          "attachment": {
+            "displayOrder": 10,
+            "title": "attachment",
+            "description": "The attachment for the issue",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "self": {
+                  "displayOrder": 1,
+                  "title": "self",
+                  "description": "The URL for the attachment",
+                  "type": "string"
+                },
+                "id": {
+                  "displayOrder": 2,
+                  "title": "id",
+                  "description": "The unique identifier for the attachment",
+                  "type": "string"
+                },
+                "filename": {
+                  "displayOrder": 3,
+                  "title": "filename",
+                  "description": "The filename for the attachment",
+                  "type": "string"
+                },
+                "author": {
+                  "displayOrder": 4,
+                  "title": "author",
+                  "description": "The author for the attachment",
+                  "type": "object",
+                  "properties": {
+                    "self": {
+                      "displayOrder": 1,
+                      "title": "self",
+                      "description": "The URL for the author",
+                      "type": "string"
+                    },
+                    "id": {
+                      "displayOrder": 2,
+                      "title": "id",
+                      "description": "The unique identifier for the attachment",
+                      "type": "string"
+                    },
+                    "name": {
+                      "displayOrder": 3,
+                      "title": "name",
+                      "description": "The name for the author",
+                      "type": "string"
+                    },
+                    "key": {
+                      "displayOrder": 4,
+                      "title": "key",
+                      "description": "The key for the author",
+                      "type": "string"
+                    },
+                    "emailAddress": {
+                      "displayOrder": 5,
+                      "title": "emailAddress",
+                      "description": "The emailAddress for the author",
+                      "type": "string"
+                    },
+                    "avatarUrls": {
+                      "displayOrder": 6,
+                      "title": "avatarUrls",
+                      "description": "The url for the avatar",
+                      "type": "object",
+                      "properties": {
+                        "48x48": {
+                          "displayOrder": 1,
+                          "title": "48x48",
+                          "description": "The url for the avatar icon",
+                          "type": "string"
+                        },
+                        "24x24": {
+                          "displayOrder": 2,
+                          "title": "24x24",
+                          "description": "The url for the avatar icon",
+                          "type": "string"
+                        },
+                        "16x16": {
+                          "displayOrder": 3,
+                          "title": "16x16",
+                          "description": "The url for the avatar icon",
+                          "type": "string"
+                        },
+                        "32x32": {
+                          "displayOrder": 4,
+                          "title": "32x32",
+                          "description": "The url for the avatar icon",
+                          "type": "string"
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    "displayName": {
+                      "displayOrder": 7,
+                      "title": "displayName",
+                      "description": "The displayName for the author",
+                      "type": "string"
+                    },
+                    "active": {
+                      "displayOrder": 8,
+                      "title": "active",
+                      "description": "The active for the author",
+                      "type": "boolean"
+                    },
+                    "timeZone": {
+                      "displayOrder": 9,
+                      "title": "timeZone",
+                      "description": "The timeZone for the author",
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "created": {
+                  "displayOrder": 5,
+                  "title": "created",
+                  "description": "created date for attachment",
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "size": {
+                  "displayOrder": 6,
+                  "title": "size",
+                  "description": "The size for attachment",
+                  "type": "number"
+                },
+                "mimeType": {
+                  "displayOrder": 7,
+                  "title": "mimeType",
+                  "description": "mimeType for attachment",
+                  "type": "string"
+                },
+                "content": {
+                  "displayOrder": 8,
+                  "title": "content",
+                  "description": "The  content for the attachment",
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            },
+            "additionalItems": false
+          },
+          "aggregatetimeestimate": {
+            "displayOrder": 11,
+            "title": "aggregatetimeestimate",
+            "description": "The aggregatetimeestimate for the issue",
+            "type": "number"
+          },
+          "resolutiondate": {
+            "displayOrder": 12,
+            "title": "resolutiondate",
+            "description": "The resolutiondate for the issue",
+            "type": "string",
+            "format": "date-time"
+          },
+          "workratio": {
+            "displayOrder": 13,
+            "title": "workratio",
+            "description": "The workratio description",
+            "type": "number"
+          },
+          "summary": {
+            "displayOrder": 14,
+            "title": "Summary",
+            "description": "The Summary for the issue",
+            "type": "string"
+          },
+          "components": {
+            "displayOrder": 6,
+            "title": "Components",
+            "description": "List of components this issue is related to",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "self": {
+                  "displayOrder": 1,
+                  "title": "self",
+                  "description": "The URL for the components",
+                  "type": "string"
+                },
+                "id": {
+                  "displayOrder": 2,
+                  "title": "id",
+                  "description": "The unique identifier for the components",
+                  "type": "string"
+                },
+                "description": {
+                  "displayOrder": 3,
+                  "title": "Description",
+                  "description": "The description for the components",
+                  "type": "string"
+                },
+                "name": {
+                  "displayOrder": 4,
+                  "title": "name",
+                  "description": "The name for the components",
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            },
+            "additionalItems": false
+          },
+          "lastViewed": {
+            "displayOrder": 15,
+            "title": "lastViewed",
+            "description": "The lastViewed description for the issue",
+            "type": "string",
+            "format": "date-time"
+          },
+          "watches": {
+            "displayOrder": 16,
+            "title": "watches",
+            "description": "The watch description for issue",
+            "type": "object",
+            "properties": {
+              "self": {
+                "displayOrder": 1,
+                "title": "self",
+                "description": "The url for the watchers",
+                "type": "string"
+              },
+              "watchcount": {
+                "displayOrder": 2,
+                "title": "watchcount",
+                "description": "The watchcount description",
+                "type": "number"
+              },
+              "isWatching": {
+                "displayOrder": 3,
+                "title": "isWatching",
+                "description": "The iswatching description for issue",
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
+          },
+          "creator": {
+            "displayOrder": 17,
+            "title": "creator",
+            "description": "The creator for the attachment",
+            "type": "object",
+            "properties": {
+              "self": {
+                "displayOrder": 1,
+                "title": "self",
+                "description": "The URL for the creator",
+                "type": "string"
+              },
+              "name": {
+                "displayOrder": 2,
+                "title": "name",
+                "description": "The name for the creator",
+                "type": "string"
+              },
+              "key": {
+                "displayOrder": 3,
+                "title": "key",
+                "description": "The key for the author",
+                "type": "string"
+              },
+              "emailAddress": {
+                "displayOrder": 4,
+                "title": "emailAddress",
+                "description": "The emailAddress for the author",
+                "type": "string"
+              },
+              "avatarUrls": {
+                "displayOrder": 5,
+                "title": "avatarUrls",
+                "description": "The url for the avatar",
+                "type": "object",
+                "properties": {
+                  "48x48": {
+                    "displayOrder": 1,
+                    "title": "48x48",
+                    "description": "The url for the avatar icon",
+                    "type": "string"
+                  },
+                  "24x24": {
+                    "displayOrder": 2,
+                    "title": "24x24",
+                    "description": "The url for the avatar icon",
+                    "type": "string"
+                  },
+                  "16x16": {
+                    "displayOrder": 3,
+                    "title": "16x16",
+                    "description": "The url for the avatar icon",
+                    "type": "string"
+                  },
+                  "32x32": {
+                    "displayOrder": 4,
+                    "title": "32x32",
+                    "description": "The url for the avatar icon",
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "displayName": {
+                "displayOrder": 6,
+                "title": "displayName",
+                "description": "The displayName for the author",
+                "type": "string"
+              },
+              "active": {
+                "displayOrder": 7,
+                "title": "active",
+                "description": "The active for the author",
+                "type": "boolean"
+              },
+              "timeZone": {
+                "displayOrder": 8,
+                "title": "timeZone",
+                "description": "The timeZone for the author",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          "subtasks": {
+            "displayOrder": 6,
+            "title": "Subtasks",
+            "description": "List of versions this issue is related to",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "self": {
+                  "displayOrder": 1,
+                  "title": "Self",
+                  "description": "The URL for the versions",
+                  "type": "string"
+                },
+                "id": {
+                  "displayOrder": 2,
+                  "title": "ID",
+                  "description": "The unique identifier for the versions",
+                  "type": "string"
+                },
+                "key": {
+                  "displayOrder": 4,
+                  "title": "Key",
+                  "description": "The name for the versions",
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            },
+            "additionalItems": false
+          },
+          "created": {
+            "displayOrder": 19,
+            "title": "created",
+            "description": "The created description for the issue",
+            "type": "string",
+            "format": "date-time"
+          },
+          "reporter": {
+            "displayOrder": 20,
+            "title": "reporter",
+            "description": "The reporter for the issue",
+            "type": "object",
+            "properties": {
+              "self": {
+                "displayOrder": 1,
+                "title": "self",
+                "description": "The URL for the reporter",
+                "type": "string"
+              },
+              "name": {
+                "displayOrder": 2,
+                "title": "name",
+                "description": "The name for the reporter",
+                "type": "string"
+              },
+              "key": {
+                "displayOrder": 3,
+                "title": "key",
+                "description": "The key for the reporter",
+                "type": "string"
+              },
+              "emailAddress": {
+                "displayOrder": 4,
+                "title": "emailAddress",
+                "description": "The emailAddress for the reporter",
+                "type": "string"
+              },
+              "avatarUrls": {
+                "displayOrder": 5,
+                "title": "avatarUrls",
+                "description": "The url for the avatar",
+                "type": "object",
+                "properties": {
+                  "48x48": {
+                    "displayOrder": 1,
+                    "title": "48x48",
+                    "description": "The url for the avatar icon",
+                    "type": "string"
+                  },
+                  "24x24": {
+                    "displayOrder": 2,
+                    "title": "24x24",
+                    "description": "The url for the avatar icon",
+                    "type": "string"
+                  },
+                  "16x16": {
+                    "displayOrder": 3,
+                    "title": "16x16",
+                    "description": "The url for the avatar icon",
+                    "type": "string"
+                  },
+                  "32x32": {
+                    "displayOrder": 4,
+                    "title": "32x32",
+                    "description": "The url for the avatar icon",
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "displayName": {
+                "displayOrder": 6,
+                "title": "displayName",
+                "description": "The displayName for the reporter",
+                "type": "string"
+              },
+              "active": {
+                "displayOrder": 7,
+                "title": "active",
+                "description": "The active for the reporter",
+                "type": "boolean"
+              },
+              "timeZone": {
+                "displayOrder": 8,
+                "title": "timeZone",
+                "description": "The timeZone for the reporter",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          "aggregateprogress": {
+            "displayOrder": 21,
+            "title": "aggregateprogress",
+            "description": "The aggregateprogress for the issue",
+            "type": "object",
+            "properties": {
+              "progress": {
+                "displayOrder": 1,
+                "title": "progress",
+                "description": "The progress for the issue",
+                "type": "number"
+              },
+              "total": {
+                "displayOrder": 2,
+                "title": "total",
+                "description": "The total for the issue",
+                "type": "number"
+              }
+            },
+            "additionalProperties": false
+          },
+          "priority": {
+            "displayOrder": 22,
+            "title": "priority",
+            "description": "The priority for issue",
+            "type": "object",
+            "properties": {
+              "self": {
+                "displayOrder": 1,
+                "title": "self",
+                "description": "The url for the watchers",
+                "type": "string"
+              },
+              "iconUrl": {
+                "displayOrder": 2,
+                "title": "iconUrl",
+                "description": "The iconUrl description for the priority",
+                "type": "string"
+              },
+              "name": {
+                "displayOrder": 3,
+                "title": "name",
+                "description": "The name description for priority",
+                "type": "string"
+              },
+              "id": {
+                "displayOrder": 4,
+                "title": "id",
+                "description": "The identifier for the priority ",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          "labels": {
+            "displayOrder": 6,
+            "title": "Labels",
+            "description": "List of Labels this issue is related to",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {},
+              "additionalProperties": false
+            },
+            "additionalItems": false
+          },
+          "environment": {
+            "displayOrder": 24,
+            "title": "environment",
+            "description": "The environment for the issue",
+            "type": "string"
+          },
+          "timeestimate": {
+            "displayOrder": 25,
+            "title": "The timeestimate for the issue",
+            "type": "number"
+          },
+          "aggregatetimeoriginalestimate": {
+            "displayOrder": 26,
+            "title": "The aggregatetimeoriginalestimate for the issue",
+            "type": "number"
+          },
+          "versions": {
+            "displayOrder": 6,
+            "title": "versions",
+            "description": "List of versions this issue is related to",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "self": {
+                  "displayOrder": 1,
+                  "title": "self",
+                  "description": "The URL for the versions",
+                  "type": "string"
+                },
+                "id": {
+                  "displayOrder": 2,
+                  "title": "id",
+                  "description": "The unique identifier for the versions",
+                  "type": "string"
+                },
+                "name": {
+                  "displayOrder": 4,
+                  "title": "name",
+                  "description": "The name for the versions",
+                  "type": "string"
+                },
+                "archived": {
+                  "displayOrder": 5,
+                  "title": "archived",
+                  "description": "The archive description",
+                  "type": "boolean"
+                },
+                "released": {
+                  "displayOrder": 5,
+                  "title": "released",
+                  "description": "The released description",
+                  "type": "boolean"
+                }
+              },
+              "additionalProperties": false
+            },
+            "additionalItems": false
+          },
+          "duedate": {
+            "displayOrder": 28,
+            "title": "duedate",
+            "description": "The duedate for the issue",
+            "type": "string",
+            "format": "date-time"
+          },
+          "progress": {
+            "displayOrder": 29,
+            "title": "Progress",
+            "description": "The progress for the issue",
+            "type": "object",
+            "properties": {
+              "progress": {
+                "displayOrder": 1,
+                "title": "progress",
+                "description": "The progress for the issue",
+                "type": "number"
+              },
+              "total": {
+                "displayOrder": 2,
+                "title": "total",
+                "description": "The total for the issue",
+                "type": "number"
+              }
+            },
+            "additionalProperties": false
+          },
+          "comment": {
+            "displayOrder": 4,
+            "title": "Comment",
+            "description": "The comment",
+            "type": "object",
+            "properties": {
+              "comments": {
+                "displayOrder": 6,
+                "title": "Comments",
+                "description": "List of comments this issue is related to",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "self": {
+                      "displayOrder": 1,
+                      "title": "self",
+                      "description": "The URL for the Comments",
+                      "type": "string"
+                    },
+                    "id": {
+                      "displayOrder": 2,
+                      "title": "id",
+                      "description": "The unique identifier for the Comments",
+                      "type": "string"
+                    },
+                    "author": {
+                      "displayOrder": 4,
+                      "title": "author",
+                      "description": "The author for the comments",
+                      "type": "object",
+                      "properties": {
+                        "self": {
+                          "displayOrder": 1,
+                          "title": "self",
+                          "description": "The URL for the author",
+                          "type": "string"
+                        },
+                        "id": {
+                          "displayOrder": 2,
+                          "title": "id",
+                          "description": "The unique identifier for the attachment",
+                          "type": "string"
+                        },
+                        "name": {
+                          "displayOrder": 3,
+                          "title": "name",
+                          "description": "The name for the author",
+                          "type": "string"
+                        },
+                        "key": {
+                          "displayOrder": 4,
+                          "title": "key",
+                          "description": "The key for the author",
+                          "type": "string"
+                        },
+                        "emailAddress": {
+                          "displayOrder": 5,
+                          "title": "emailAddress",
+                          "description": "The emailAddress for the author",
+                          "type": "string"
+                        },
+                        "avatarUrls": {
+                          "displayOrder": 6,
+                          "title": "avatarUrls",
+                          "description": "The url for the avatar",
+                          "type": "object",
+                          "properties": {
+                            "48x48": {
+                              "displayOrder": 1,
+                              "title": "48x48",
+                              "description": "The url for the avatar icon",
+                              "type": "string"
+                            },
+                            "24x24": {
+                              "displayOrder": 2,
+                              "title": "24x24",
+                              "description": "The url for the avatar icon",
+                              "type": "string"
+                            },
+                            "16x16": {
+                              "displayOrder": 3,
+                              "title": "16x16",
+                              "description": "The url for the avatar icon",
+                              "type": "string"
+                            },
+                            "32x32": {
+                              "displayOrder": 4,
+                              "title": "32x32",
+                              "description": "The url for the avatar icon",
+                              "type": "string"
+                            }
+                          },
+                          "additionalProperties": false
+                        },
+                        "displayName": {
+                          "displayOrder": 7,
+                          "title": "displayName",
+                          "description": "The displayName for the author",
+                          "type": "string"
+                        },
+                        "active": {
+                          "displayOrder": 8,
+                          "title": "active",
+                          "description": "The active for the author",
+                          "type": "boolean"
+                        },
+                        "timeZone": {
+                          "displayOrder": 9,
+                          "title": "timeZone",
+                          "description": "The timeZone for the author",
+                          "type": "string"
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    "body": {
+                      "displayOrder": 5,
+                      "title": "body",
+                      "description": "The body for the Comments",
+                      "type": "string"
+                    },
+                    "updateAuthor": {
+                      "displayOrder": 6,
+                      "title": "updateAuthor",
+                      "description": "The updateAuthor for the comments",
+                      "type": "object",
+                      "properties": {
+                        "self": {
+                          "displayOrder": 1,
+                          "title": "self",
+                          "description": "The URL for the author",
+                          "type": "string"
+                        },
+                        "id": {
+                          "displayOrder": 2,
+                          "title": "id",
+                          "description": "The unique identifier for the attachment",
+                          "type": "string"
+                        },
+                        "name": {
+                          "displayOrder": 3,
+                          "title": "name",
+                          "description": "The name for the author",
+                          "type": "string"
+                        },
+                        "key": {
+                          "displayOrder": 4,
+                          "title": "key",
+                          "description": "The key for the author",
+                          "type": "string"
+                        },
+                        "emailAddress": {
+                          "displayOrder": 5,
+                          "title": "emailAddress",
+                          "description": "The emailAddress for the author",
+                          "type": "string"
+                        },
+                        "avatarUrls": {
+                          "displayOrder": 6,
+                          "title": "avatarUrls",
+                          "description": "The url for the avatar",
+                          "type": "object",
+                          "properties": {
+                            "48x48": {
+                              "displayOrder": 1,
+                              "title": "48x48",
+                              "description": "The url for the avatar icon",
+                              "type": "string"
+                            },
+                            "24x24": {
+                              "displayOrder": 2,
+                              "title": "24x24",
+                              "description": "The url for the avatar icon",
+                              "type": "string"
+                            },
+                            "16x16": {
+                              "displayOrder": 3,
+                              "title": "16x16",
+                              "description": "The url for the avatar icon",
+                              "type": "string"
+                            },
+                            "32x32": {
+                              "displayOrder": 4,
+                              "title": "32x32",
+                              "description": "The url for the avatar icon",
+                              "type": "string"
+                            }
+                          },
+                          "additionalProperties": false
+                        },
+                        "displayName": {
+                          "displayOrder": 7,
+                          "title": "displayName",
+                          "description": "The displayName for the author",
+                          "type": "string"
+                        },
+                        "active": {
+                          "displayOrder": 8,
+                          "title": "active",
+                          "description": "The active for the author",
+                          "type": "boolean"
+                        },
+                        "timeZone": {
+                          "displayOrder": 9,
+                          "title": "timeZone",
+                          "description": "The timeZone for the author",
+                          "type": "string"
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    "created": {
+                      "displayOrder": 7,
+                      "title": "created",
+                      "description": "The created date for the comments",
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "updated": {
+                      "displayOrder": 8,
+                      "title": "updated",
+                      "description": "The updated date for the comments",
+                      "type": "string",
+                      "format": "date-time"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "additionalItems": false
+              },
+              "startAt": {
+                "displayOrder": 1,
+                "title": "startAt",
+                "description": "The URL for the WORKLOG",
+                "type": "number"
+              },
+              "maxResults": {
+                "displayOrder": 1,
+                "title": "maxResults",
+                "description": "The maxResults for the WORKLOG",
+                "type": "number"
+              },
+              "total": {
+                "displayOrder": 1,
+                "title": "Total",
+                "description": "The total for the Issue",
+                "type": "number"
+              }
+            },
+            "additionalProperties": false
+          },
+          "votes": {
+            "displayOrder": 31,
+            "title": "votes",
+            "description": "The votes for the issue",
+            "type": "object",
+            "properties": {
+              "self": {
+                "displayOrder": 1,
+                "title": "self",
+                "description": "The self for the issue",
+                "type": "string"
+              },
+              "votes": {
+                "displayOrder": 2,
+                "title": "votes",
+                "description": "The votes for the issue",
+                "type": "number"
+              },
+              "hasVoted": {
+                "displayOrder": 3,
+                "title": "hasVoted",
+                "description": "The hasVoted for the issue",
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
+          },
+          "worklog": {
+            "displayOrder": 4,
+            "title": "Worklog",
+            "description": "The author for the worklog",
+            "type": "object",
+            "properties": {
+              "worklogs": {
+                "displayOrder": 6,
+                "title": "Worklogs",
+                "description": "List of worklogs this issue is related to",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "self": {
+                      "displayOrder": 1,
+                      "title": "self",
+                      "description": "The URL for the worklogs",
+                      "type": "string"
+                    },
+                    "id": {
+                      "displayOrder": 2,
+                      "title": "id",
+                      "description": "The unique identifier for the worklogs",
+                      "type": "string"
+                    },
+                    "author": {
+                      "displayOrder": 4,
+                      "title": "author",
+                      "description": "The author for the worklogs",
+                      "type": "object",
+                      "properties": {
+                        "self": {
+                          "displayOrder": 1,
+                          "title": "self",
+                          "description": "The URL for the author",
+                          "type": "string"
+                        },
+                        "id": {
+                          "displayOrder": 2,
+                          "title": "id",
+                          "description": "The unique identifier for the attachment",
+                          "type": "string"
+                        },
+                        "name": {
+                          "displayOrder": 3,
+                          "title": "name",
+                          "description": "The name for the author",
+                          "type": "string"
+                        },
+                        "key": {
+                          "displayOrder": 4,
+                          "title": "key",
+                          "description": "The key for the author",
+                          "type": "string"
+                        },
+                        "emailAddress": {
+                          "displayOrder": 5,
+                          "title": "emailAddress",
+                          "description": "The emailAddress for the author",
+                          "type": "string"
+                        },
+                        "avatarUrls": {
+                          "displayOrder": 6,
+                          "title": "avatarUrls",
+                          "description": "The url for the avatar",
+                          "type": "object",
+                          "properties": {
+                            "48x48": {
+                              "displayOrder": 1,
+                              "title": "48x48",
+                              "description": "The url for the avatar icon",
+                              "type": "string"
+                            },
+                            "24x24": {
+                              "displayOrder": 2,
+                              "title": "24x24",
+                              "description": "The url for the avatar icon",
+                              "type": "string"
+                            },
+                            "16x16": {
+                              "displayOrder": 3,
+                              "title": "16x16",
+                              "description": "The url for the avatar icon",
+                              "type": "string"
+                            },
+                            "32x32": {
+                              "displayOrder": 4,
+                              "title": "32x32",
+                              "description": "The url for the avatar icon",
+                              "type": "string"
+                            }
+                          },
+                          "additionalProperties": false
+                        },
+                        "displayName": {
+                          "displayOrder": 7,
+                          "title": "displayName",
+                          "description": "The displayName for the author",
+                          "type": "string"
+                        },
+                        "active": {
+                          "displayOrder": 8,
+                          "title": "active",
+                          "description": "The active for the author",
+                          "type": "boolean"
+                        },
+                        "timeZone": {
+                          "displayOrder": 9,
+                          "title": "timeZone",
+                          "description": "The timeZone for the author",
+                          "type": "string"
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "additionalItems": false
+              },
+              "startAt": {
+                "displayOrder": 1,
+                "title": "startAt",
+                "description": "The URL for the WORKLOG",
+                "type": "number"
+              },
+              "maxResults": {
+                "displayOrder": 1,
+                "title": "maxResults",
+                "description": "The maxResults for the WORKLOG",
+                "type": "number"
+              },
+              "total": {
+                "displayOrder": 1,
+                "title": "Total",
+                "description": "The total for the Issue",
+                "type": "number"
+              }
+            },
+            "additionalProperties": false
+          },
+          "assignee": {
+            "displayOrder": 33,
+            "title": "assignee",
+            "description": "The assignee for issue",
+            "type": "object",
+            "properties": {
+              "self": {
+                "displayOrder": 1,
+                "title": "Key",
+                "description": "The URL for the assignee",
+                "type": "string"
+              },
+              "name": {
+                "displayOrder": 2,
+                "title": "name",
+                "description": "The name for the assignee",
+                "type": "string"
+              },
+              "key": {
+                "displayOrder": 3,
+                "title": "key",
+                "description": "The identifier for the assignee",
+                "type": "string"
+              },
+              "emailAddress": {
+                "displayOrder": 4,
+                "title": "emailAddress",
+                "description": "The emailAddress for the assignee",
+                "type": "string"
+              },
+              "avatarUrls": {
+                "displayOrder": 5,
+                "title": "avatarUrls",
+                "description": "The url for the avatar",
+                "type": "object",
+                "properties": {
+                  "48x48": {
+                    "displayOrder": 1,
+                    "title": "48x48",
+                    "description": "The url for the avatar icon",
+                    "type": "string"
+                  },
+                  "24x24": {
+                    "displayOrder": 2,
+                    "title": "24x24",
+                    "description": "The url for the avatar icon",
+                    "type": "string"
+                  },
+                  "16x16": {
+                    "displayOrder": 3,
+                    "title": "16x16",
+                    "description": "The url for the avatar icon",
+                    "type": "string"
+                  },
+                  "32x32": {
+                    "displayOrder": 4,
+                    "title": "32x32",
+                    "description": "The url for the avatar icon",
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "displayName": {
+                "displayOrder": 6,
+                "title": "displayName",
+                "description": "The displayName for the assignee",
+                "type": "string"
+              },
+              "active": {
+                "displayOrder": 7,
+                "title": "active",
+                "description": "The active description for the assignee",
+                "type": "boolean"
+              },
+              "timeZone": {
+                "displayOrder": 8,
+                "title": "timeZone",
+                "description": "The timeZone for the assignee",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          "updated": {
+            "displayOrder": 34,
+            "title": "updated",
+            "description": "The updated date for the Issue ",
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "displayOrder": 35,
+            "title": "status",
+            "description": "The status for issue",
+            "type": "object",
+            "properties": {
+              "self": {
+                "displayOrder": 1,
+                "title": "self",
+                "description": "The URL for the status",
+                "type": "string"
+              },
+              "description": {
+                "displayOrder": 2,
+                "title": "description",
+                "description": "The description for the status",
+                "type": "string"
+              },
+              "iconUrl": {
+                "displayOrder": 3,
+                "title": "iconUrl",
+                "description": "The iconUrl for the issue",
+                "type": "string"
+              },
+              "name": {
+                "displayOrder": 4,
+                "title": "name",
+                "description": "The name for the issue statuse",
+                "type": "string"
+              },
+              "id": {
+                "displayOrder": 5,
+                "title": "ID",
+                "description": "The unique identifier for the issue STATUS",
+                "type": "string"
+              },
+              "statusCategory": {
+                "displayOrder": 6,
+                "title": "statusCategory",
+                "description": "The statusCategory for the issue",
+                "type": "object",
+                "properties": {
+                  "self": {
+                    "displayOrder": 1,
+                    "title": "self",
+                    "description": "The self for the issue",
+                    "type": "string"
+                  },
+                  "id": {
+                    "displayOrder": 2,
+                    "title": "ID",
+                    "description": "The unique identifier for the issue Status Category",
+                    "type": "string"
+                  },
+                  "colorName": {
+                    "displayOrder": 3,
+                    "title": "colorName",
+                    "description": "The colorName for the issue Status Category",
+                    "type": "string"
+                  },
+                  "name": {
+                    "displayOrder": 4,
+                    "title": "name",
+                    "description": "The name for the issue Status Category",
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      "self": {
+        "displayOrder": 2,
+        "title": "Self",
+        "description": "The UR generated for the issue",
+        "type": "string"
+      },
+      "key": {
+        "displayOrder": 3,
+        "title": "Key",
+        "description": "The issue Key",
+        "display": {
+          "nameProperty": true
+        },
+        "type": "string"
+      }
+    },
+    "title": "Issue",
+    "additionalProperties": false
+  },
+  "type": "array",
+  "title": "Issue"
+}
